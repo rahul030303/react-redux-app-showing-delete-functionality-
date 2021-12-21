@@ -2,7 +2,8 @@
 const initialState = {
     students:[
         
-    ]
+    ],
+    count:0
 }
 
 export const studentReducer = (state = initialState, action)=>{
@@ -23,6 +24,13 @@ export const studentReducer = (state = initialState, action)=>{
                     ...state,
                     students:action.payload
                 };
+
+                case 'INCREMENT': 
+                console.log("in add case");
+                    return {
+                        ...state,
+                        count:action.payload
+                    };
 
           default:
               console.log("default case")
