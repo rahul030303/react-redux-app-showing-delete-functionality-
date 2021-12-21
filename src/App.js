@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import Table from './Table';
 import ChildComp from './ChildComp';
 import {useDispatch, useSelector} from 'react-redux';
+import ClassComp from './ClassComp';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <div >
      <Table />   
      <ChildComp changeCount = {(val)=>handleChange(val)} count = {count} />    
+     <ClassComp />
     </div>
   );
 }
